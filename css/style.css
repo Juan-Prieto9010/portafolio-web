@@ -239,6 +239,9 @@
 .diploma .n8{
  grid-area: "n8";
 }
+.diploma .n9{
+ grid-area: "n9";
+}
 .diplomas img{
  width: 100%;
 } 
