@@ -192,6 +192,27 @@
  /* max-width: 100%; */
 }
 
+/*--------------------CARRERAS---------------------*/
+
+.carreras{
+  background: #ECA062;
+}
+.grid-carreras{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-carreras img{
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border: 0px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+
+}
 /*----------------CERTIFICACIONES-------------------*/
 .logros{
  background: #27710dcc;
@@ -210,7 +231,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- border: 2px solid black;
+ border: 0px solid black;
  border-radius: 5px;
  box-shadow: 2px 2px 2px black;
  box-sizing: border-box;
@@ -244,6 +265,7 @@
 }
 .diplomas img{
  width: 100%;
+ border-radius: 5px;
 } 
 
 
@@ -276,6 +298,30 @@
  margin-right: 5px;
 }
 
+/*--------------FORMACIÓN ACADEMICA-------------*/
+
+.formacion{
+  background-color: #abb295;
+  
+}
+.estudios {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.formacion .udec img{
+
+  width: 110px;
+  height: 140px;
+}
+
+.formacion .platzi img{
+
+  width: 200px;
+  height: 60px;
+}
 /*------------------CONTACTAR---------------------------*/
 .social{
  background: #7f8426;
@@ -325,12 +371,28 @@
   width: 80%;
 }
 
+
+
 /*-----------------CONOCIMIENTOS-------------------*/
 .principal .container{
   width: 100%;
 }
 .container .conocimientos{
   width: 100%;
+}
+
+/*------------------CARRERAS----------------------*/
+
+.carreras .container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.carreras h2{
+  margin: 10px 20px;
+}
+.carreras .grid-carreras{
+  margin: 0 20px;
 }
 
 /*------------------DIPLOMAS------------------------*/
@@ -356,6 +418,20 @@
   margin: 0 20px;
 }
 
+/*---------------FORMACION ACADEMICA*/
+
+.formacion .container{
+  width: 100%;
+}
+
+.formacion h2{
+  margin: 10px 20px;
+}
+
+.formacion .estudios{
+  margin: 0 20px;
+  margin-bottom: 15px;
+}
 /*------------------CONTACTO--------------------------*/
 .social .container{
   width: 100%;
@@ -479,8 +555,20 @@ h3{
 .job:nth-of-type(3){
   margin-bottom: 25px;
 }
-}
 
+/*----------------FORMACION----------------*/
+.formacion .estudios{
+  display: block;
+}
+.formacion .estudios .udec{
+  padding: 25px;
+}
+.estudios img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
 @media screen and (max-width: 320px){
  .hero{
   padding: 0 20px;
@@ -493,6 +581,10 @@ h3{
 }
 .hero img{
   margin-bottom: 15px;
+}
+
+.grid-carreras img{
+  width: 100%;
 }
 
 .logros .diplomas{
