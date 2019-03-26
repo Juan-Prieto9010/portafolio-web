@@ -157,6 +157,17 @@
   letter-spacing: 3px;
   color: white;
   text-shadow: 4px 4px 4px black;
+  transition: 2s;
+  animation-name: titulo;
+  animation-duration: 2s;
+}
+@keyframes titulo{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%
+  }
 }
 .hero h1 span{
  color: #70AE6F;
@@ -167,7 +178,17 @@
   justify-content: center;
   margin-top: 10px;
   padding: 5px;
-
+  transition: 3s;
+  animation-name: foto;
+  animation-duration: 5s;
+}
+@keyframes foto{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
 }
 .imagen img{
   width: 100%;
@@ -237,6 +258,7 @@
  border-radius: 5px;
  box-shadow: 2px 2px 2px black;
  box-sizing: border-box;
+ transition: 2s;
 }
 .diploma .n1{
  grid-area: "n1";
@@ -276,7 +298,6 @@
 .diploma:nth-of-type(10){
   grid-column: 2 / 3; 
 }
-
 
 /*-------------------EXPERIENCIA LABORAL------------------*/
 .experiencia{
