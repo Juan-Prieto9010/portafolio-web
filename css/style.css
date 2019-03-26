@@ -223,6 +223,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1s;
 }
 .grid-carreras img{
   display: block;
@@ -233,7 +234,10 @@
   box-shadow: 2px 2px 2px black;
   box-sizing: border-box;
   margin-bottom: 3px;
-
+  
+}
+.grid-carreras:hover{
+  transform: rotateY(360deg);
 }
 /*----------------CERTIFICACIONES-------------------*/
 .logros{
@@ -258,7 +262,7 @@
  border-radius: 5px;
  box-shadow: 2px 2px 2px black;
  box-sizing: border-box;
- transition: 2s;
+ transition: 1s;
 }
 .diploma .n1{
  grid-area: "n1";
@@ -297,6 +301,9 @@
 
 .diploma:nth-of-type(10){
   grid-column: 2 / 3; 
+}
+.diploma:hover{
+  transform: rotate(360deg);
 }
 
 /*-------------------EXPERIENCIA LABORAL------------------*/
