@@ -142,16 +142,17 @@
  }
  /*--------------------ENCABEZADO------------------*/
  .hero{
-   background: #3c3d42;
-   overflow: hidden;
- }
- .hero .container{
-   margin-top: 5px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
- }
- .hero h1{
+  /* background: #3c3d42; */
+  background: linear-gradient(90deg,#6d6a8f, #010101);
+  overflow: hidden;
+}
+.hero .container{
+ margin-top: 5px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.hero h1{
   line-height: 40px;
   letter-spacing: 3px;
   color: white;
@@ -180,7 +181,7 @@
 
 /*-----------------CONOCIMIENTOS--------------------*/
 .principal{
- background: #44546b;
+ background: linear-gradient(to top left,#e7d0d0,black);
 }
 
 .principal .conocimientos{
@@ -195,7 +196,7 @@
 /*--------------------CARRERAS---------------------*/
 
 .carreras{
-  background: #ECA062;
+  background: linear-gradient(#8a9d8a, #ECA062);
 }
 .grid-carreras{
   display: flex;
@@ -215,14 +216,15 @@
 }
 /*----------------CERTIFICACIONES-------------------*/
 .logros{
- background: #27710dcc;
+ background: linear-gradient(90deg, #27710dcc -60%, #180f0f 90%);
 }
 .diplomas{
  display: grid;
- grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+ grid-template: repeat(4, 1fr) / repeat(3, 1fr);
  grid-template-areas: "n1 n2 n3"
  "n4 n5 n6"
- "n7 n8 n9";
+ "n7 n8 n9"
+ "n10 n10 n10";
  grid-gap: 5px;
  overflow: hidden;
  padding: 3px 3px;
@@ -263,15 +265,22 @@
 .diploma .n9{
  grid-area: "n9";
 }
+.diploma .n10{
+  grid-area: "n10";
+}
 .diplomas img{
  width: 100%;
  border-radius: 5px;
 } 
 
+.diploma:nth-of-type(10){
+  grid-column: 2 / 3; 
+}
+
 
 /*-------------------EXPERIENCIA LABORAL------------------*/
 .experiencia{
- background-color: #152290;
+ background: linear-gradient(to top left, #1a617c 10%, #152290 90%);
 }
 .grid-exp-container{
  display: grid;
@@ -301,7 +310,8 @@
 /*--------------FORMACIÓN ACADEMICA-------------*/
 
 .formacion{
-  background-color: #abb295;
+  background: linear-gradient(90deg,#88aa34 -50%, #979797 90%);
+  overflow: hidden;
   
 }
 .estudios {
@@ -324,7 +334,7 @@
 }
 /*------------------CONTACTAR---------------------------*/
 .social{
- background: #7f8426;
+ background: radial-gradient(at right, #aebdd9, #181414);
 }
 .social .container{
  display: block;
@@ -350,7 +360,7 @@
 
 /*---------------------DATOS---------------------------*/
 .datos{
- background-color: #2a3520;
+ background: radial-gradient(at top center,#2a3520 , #848484);
 }
 .datos .container p{
  display: flex;
