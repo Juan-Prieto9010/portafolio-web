@@ -120,7 +120,7 @@
 
 
  body{
-   font-family: andadaregular !important;
+   font-family: andadaregular;
    font-size: 16px;
    line-height: 1.4em;
  }
@@ -134,8 +134,6 @@
  }
  h2{
    text-align: center;
-   margin-top: 10px !important;
-   margin-bottom: 20px !important;
    border-bottom: 2px solid red;
    padding-bottom: 15px;
    color: white;
@@ -212,8 +210,32 @@
  align-items: center;
  justify-content: space-around;
 }
+.conimientos img{
+ /* max-width: 100%; */
+}
+
 /*--------------------CARRERAS---------------------*/
 
+.carreras{
+  background: linear-gradient(#8a9d8a, #ECA062);
+}
+.grid-carreras{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+.grid-carreras img{
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border: 0px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  
+}
 .grid-carreras:hover{
   transform: rotateY(360deg);
 }
@@ -221,11 +243,67 @@
 .logros{
  background: linear-gradient(90deg, #27710dcc -60%, #180f0f 90%);
 }
+.diplomas{
+ display: grid;
+ grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+ grid-template-areas: "n1 n2 n3"
+ "n4 n5 n6"
+ "n7 n8 n9"
+ "n10 n10 n10";
+ grid-gap: 5px;
+ overflow: hidden;
+ padding: 3px 3px;
+}
+.diplomas div{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 0px solid black;
+ border-radius: 5px;
+ box-shadow: 2px 2px 2px black;
+ box-sizing: border-box;
+ transition: 1s;
+}
+.diploma .n1{
+ grid-area: "n1";
+}
+.diploma .n2{
+ grid-area: "n2";
+}
+.diploma .n3{
+ grid-area: "n3";
+}
+.diploma .n4{
+ grid-area: "n4";
+}
+.diploma .n5{
+ grid-area: "n5";
+}
+.diploma .n6{
+ grid-area: "n6";
+}
+.diploma .n7{
+ grid-area: "n7";
+}
+.diploma .n8{
+ grid-area: "n8";
+}
+.diploma .n9{
+ grid-area: "n9";
+}
+.diploma .n10{
+  grid-area: "n10";
+}
+.diplomas img{
+ width: 100%;
+ border-radius: 5px;
+} 
 
-.carousel-inner .carousel-item img{
-  box-shadow: 2px 2px 5px black;
-  border-radius: 2px;
-  margin-bottom: 6px;
+.diploma:nth-of-type(10){
+  grid-column: 2 / 3; 
+}
+.diploma:hover{
+  transform: rotate(360deg);
 }
 
 /*-------------------EXPERIENCIA LABORAL------------------*/
@@ -356,7 +434,16 @@
 }
 
 /*------------------DIPLOMAS------------------------*/
-
+.logros .container{
+  width: 100%;
+  overflow: hidden;
+}
+.logros h2{
+  margin: 10px 20px;
+}
+.logros .diplomas{
+  margin: 0 20px;
+}
 
 /*----------------EXPERIENCIA----------------------*/
 .experiencia .container{
@@ -400,7 +487,7 @@ h2{
 @media screen and (max-width: 768px){
  /*--------------------ENCABEZADO-------------------*/
  .hero{
-  padding: 0 20px;
+  padding: : 0 20px;
 }
 .hero h1{
   max-width: 100%;
@@ -424,11 +511,6 @@ h2{
   justify-content: center;
   align-items: center;
 }
-  /*Certificados*/
-  .logros .container .carousel-inner img{
-    width: 100% !important;
-    position: relative !important;
-  }
 } 
 
 
@@ -458,6 +540,9 @@ h3{
 }
 
 /*--------------------CONOCIMIENTOS-------------------*/
+.conocimintos{
+  background-color: red;
+}
 .principal .container .conocimientos{
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -477,12 +562,18 @@ h3{
   max-width: 35%;
 }
 
-/*Certificados*/
-.logros .container .carousel-inner img{
-  width: 100% !important;
-  position: relative !important;
-  left: 0 !important;
-  margin-left: -105px;
+/*------------------CERTIFICACIONES--------------------*/
+.diplomas{
+ display: grid;
+ grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+ grid-template-areas: "n1 n2"
+ "n3 n4"
+ "n5 n6"
+ "n7 n8"
+ "n9 n9";
+ grid-gap: 5px;
+ overflow: hidden;
+ padding: 3px 3px;
 }
 
 /*-------------------EXPERIENCIA----------------------*/
@@ -556,4 +647,5 @@ h3{
   display: block;
   width: 100%;
   font-size: 30px;
+
 }
