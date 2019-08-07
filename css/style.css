@@ -1,6 +1,4 @@
-/* *{
-  border: 1px solid black;
-  } */
+
   @font-face {
    font-family: 'icomoon';
    src:  url('../fonts/icomoon.eot?lqs6wj');
@@ -21,7 +19,6 @@
    font-weight: normal;
    font-style: normal;
  }
-
  [class^="icon-"], [class*=" icon-"] {
    /* use !important to prevent issues with browser extensions that change fonts */
    font-family: 'icomoon' !important;
@@ -117,12 +114,13 @@
  .icon-social2:before {
    content: "\e906";
  }
-
-
  body{
    font-family: andadaregular;
    font-size: 16px;
    line-height: 1.4em;
+ }
+ .container-principal{
+   background: linear-gradient(to top left, #1a617c 10%, #152290 90%);
  }
  header, main, section, article, footer{
    padding-bottom: 15px;
@@ -134,16 +132,15 @@
  }
  h2{
    text-align: center;
-   border-bottom: 2px solid red;
+   border-bottom: 2px solid #7b6c6c;
    padding-bottom: 15px;
    color: white;
    text-shadow: 4px 4px 4px black;
    letter-spacing: 3px;
+   padding: 40px 0 30px 0;
  }
  /*--------------------ENCABEZADO------------------*/
  .hero{
-  /* background: #3c3d42; */
-  background: linear-gradient(90deg,#6d6a8f, #010101);
   overflow: hidden;
 }
 .hero .container{
@@ -195,30 +192,17 @@
   height: 100%;
   border-radius: 10px;
   border: 3px solid white;
-  box-shadow: 4px 4px 4px black;
+  box-shadow: 3px 3px 2px #040a27;
   box-sizing: border-box;
   border-radius: 50%;
 }
-
 /*-----------------CONOCIMIENTOS--------------------*/
-.principal{
- background: linear-gradient(to top left,#e7d0d0,black);
-}
-
 .principal .conocimientos{
  display: flex;
  align-items: center;
  justify-content: space-around;
 }
-.conimientos img{
- /* max-width: 100%; */
-}
-
 /*--------------------CARRERAS---------------------*/
-
-.carreras{
-  background: linear-gradient(#8a9d8a, #ECA062);
-}
 .grid-carreras{
   display: flex;
   align-items: center;
@@ -234,22 +218,20 @@
   box-shadow: 2px 2px 2px black;
   box-sizing: border-box;
   margin-bottom: 3px;
-  
 }
 .grid-carreras:hover{
   transform: rotateY(360deg);
 }
 /*----------------CERTIFICACIONES-------------------*/
-.logros{
- background: linear-gradient(90deg, #27710dcc -60%, #180f0f 90%);
-}
 .diplomas{
  display: grid;
- grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+ grid-template: repeat(6, 1fr) / repeat(3, 1fr);
  grid-template-areas: "n1 n2 n3"
  "n4 n5 n6"
  "n7 n8 n9"
- "n10 n10 n10";
+ "n10 n11 n12"
+ "n13 n14 n15"
+ "n16 n16 n16";
  grid-gap: 5px;
  overflow: hidden;
  padding: 3px 3px;
@@ -294,12 +276,30 @@
 .diploma .n10{
   grid-area: "n10";
 }
+.diploma .n11{
+  grid-area: "n11";
+}
+.diploma .n12{
+  grid-area: "n12";
+}
+.diploma .n13{
+  grid-area: "n13";
+}
+.diploma .n14{
+  grid-area: "n14";
+}
+.diploma .n15{
+  grid-area: "n15";
+}
+.diploma .n16{
+  grid-area: "n16";
+}
 .diplomas img{
  width: 100%;
  border-radius: 5px;
 } 
 
-.diploma:nth-of-type(10){
+.diploma:nth-of-type(16){
   grid-column: 2 / 3; 
 }
 .diploma:hover{
@@ -307,9 +307,6 @@
 }
 
 /*-------------------EXPERIENCIA LABORAL------------------*/
-.experiencia{
- background: linear-gradient(to top left, #1a617c 10%, #152290 90%);
-}
 .grid-exp-container{
  display: grid;
  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -317,7 +314,7 @@
 }
 .job h3{
  padding-bottom: 10px;
- border-bottom: 2px solid red;
+ border-bottom: 2px solid #7b6c6c;
  text-shadow: 2px 2px 2px black;
 }
 .job h3, p{
@@ -338,9 +335,7 @@
 /*--------------FORMACIÓN ACADEMICA-------------*/
 
 .formacion{
-  background: linear-gradient(90deg,#88aa34 -50%, #979797 90%);
-  overflow: hidden;
-  
+  overflow: hidden; 
 }
 .estudios {
   display: flex;
@@ -348,22 +343,15 @@
   justify-content: space-around;
   margin-bottom: 15px;
 }
-
 .formacion .udec img{
-
   width: 110px;
   height: 140px;
 }
-
 .formacion .platzi img{
-
   width: 200px;
   height: 60px;
 }
 /*------------------CONTACTAR---------------------------*/
-.social{
- background: radial-gradient(at right, #aebdd9, #181414);
-}
 .social .container{
  display: block;
 }
@@ -387,9 +375,6 @@
 }
 
 /*---------------------DATOS---------------------------*/
-.datos{
- background: radial-gradient(at top center,#2a3520 , #848484);
-}
 .datos .container p{
  display: flex;
  justify-content: center;
@@ -398,254 +383,242 @@
 }
 
 @media screen and (max-width: 1024px){
- /*--------------------ENCABEZADO-------------------*/
- .hero{
-  padding: 0 20px;
-}
-.hero .container{
-  width: 100%;
-}
-.hero h1{
-  width: 80%;
-}
-
-
-
-/*-----------------CONOCIMIENTOS-------------------*/
-.principal .container{
-  width: 100%;
-}
-.container .conocimientos{
-  width: 100%;
-}
-
-/*------------------CARRERAS----------------------*/
-
-.carreras .container{
-  width: 100%;
-  overflow: hidden;
-}
-
-.carreras h2{
-  margin: 10px 20px;
-}
-.carreras .grid-carreras{
-  margin: 0 20px;
-}
-
-/*------------------DIPLOMAS------------------------*/
-.logros .container{
-  width: 100%;
-  overflow: hidden;
-}
-.logros h2{
-  margin: 10px 20px;
-}
-.logros .diplomas{
-  margin: 0 20px;
-}
-
-/*----------------EXPERIENCIA----------------------*/
-.experiencia .container{
-  width: 100%;
-}
-.experiencia h2{
-  margin: 10px 20px;
-}
-.experiencia .grid-exp-container{
-  margin: 0 20px;
-}
-
-/*---------------FORMACION ACADEMICA*/
-
-.formacion .container{
-  width: 100%;
-}
-
-.formacion h2{
-  margin: 10px 20px;
-}
-
-.formacion .estudios{
-  margin: 0 20px;
-  margin-bottom: 15px;
-}
-/*------------------CONTACTO--------------------------*/
-.social .container{
-  width: 100%;
-}
-h2{
-  margin: 20px 20px;
-}
-
-/*------------------DATOS-----------------------*/
-.datos .container{
-  width: 100%;
-}
-} 
+    /*--------------------ENCABEZADO-------------------*/
+    .hero{
+      padding: 0 20px;
+    }
+    .hero .container{
+      width: 100%;
+    }
+    .hero h1{
+      width: 80%;
+    }
+    /*-----------------CONOCIMIENTOS-------------------*/
+    .principal .container{
+      width: 100%;
+    }
+    .container .conocimientos{
+      width: 100%;
+    }
+    /*------------------CARRERAS----------------------*/
+    .carreras .container{
+      width: 100%;
+      overflow: hidden;
+    }
+    .carreras h2{
+      margin: 10px 20px;
+    }
+    .carreras .grid-carreras{
+      margin: 0 20px;
+    }
+    /*------------------DIPLOMAS------------------------*/
+    .logros .container{
+      width: 100%;
+      overflow: hidden;
+    }
+    .logros h2{
+      margin: 10px 20px;
+    }
+    .logros .diplomas{
+      margin: 0 20px;
+    }
+    /*----------------EXPERIENCIA----------------------*/
+    .experiencia .container{
+      width: 100%;
+    }
+    .experiencia h2{
+      margin: 10px 20px;
+    }
+    .experiencia .grid-exp-container{
+      margin: 0 20px;
+    }
+    /*---------------FORMACION ACADEMICA*/
+    .formacion .container{
+      width: 100%;
+    }
+    .formacion h2{
+      margin: 10px 20px;
+    }
+    .formacion .estudios{
+      margin: 0 20px;
+      margin-bottom: 15px;
+    }
+    /*------------------CONTACTO--------------------------*/
+    .social .container{
+      width: 100%;
+    }
+    h2{
+      margin: 20px 20px;
+    }
+    /*------------------DATOS-----------------------*/
+    .datos .container{
+      width: 100%;
+    }
+  }
 
 @media screen and (max-width: 768px){
- /*--------------------ENCABEZADO-------------------*/
- .hero{
-  padding: : 0 20px;
-}
-.hero h1{
-  max-width: 100%;
-  width: 100%;
-  font-size: 26px;
-  line-height: 30px;
-  text-align: left;
-  letter-spacing: 5px;
-}
-.hero img{
-  margin-bottom: 15px;
-}
+    /*--------------------ENCABEZADO-------------------*/
+    .hero{
+      padding: 0 20px;
+    }
+    .hero h1{
+      max-width: 100%;
+      width: 100%;
+      font-size: 26px;
+      line-height: 30px;
+      text-align: left;
+      letter-spacing: 5px;
+    }
+    .hero img{
+      margin-bottom: 15px;
+    }
 
-/*-----------------CONOCIMIENTOS-------------------*/
-.principal .container .conocimientos{
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-}
-.conocimientos div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /*-----------------CONOCIMIENTOS-------------------*/
+    .principal .container .conocimientos{
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    .conocimientos div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 } 
 
 
 @media screen and (max-width: 480px){
- /*--------------------ENCABEZADO-------------------*/
- h2{
-  font-size: 20px;
-}
-h3{
-  font-size: 18px;
-}
-.hero .container{
-  display: block;
-  width: 100%;
-}
-.hero h1{
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: 4px;
-}
-.hero img{
-  margin: 0 40px;
-  width: 80%;
-  max-width: 80%;
-  margin-bottom: 15px;
-  box-shadow: 2px 2px 2px black;
-}
+    /*--------------------ENCABEZADO-------------------*/
+    h2{
+      font-size: 20px;
+    }
+    h3{
+      font-size: 18px;
+    }
+    .hero .container{
+      display: block;
+      width: 100%;
+    }
+    .hero h1{
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 4px;
+    }
+    .hero img{
+      margin: 0 40px;
+      width: 80%;
+      max-width: 80%;
+      margin-bottom: 15px;
+      box-shadow: 2px 2px 2px black;
+    }
 
-/*--------------------CONOCIMIENTOS-------------------*/
-.conocimintos{
-  background-color: red;
-}
-.principal .container .conocimientos{
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  margin: 0;
-  padding: 0;
-}
-.conocimientos div{
-  margin: 0;
-  padding: 0;
-}
-.conocimientos img{
-  width: 100%;
-  max-width: 50%;
-}
-.conocimientos div:nth-of-type(4) img{
-  width: 100%;
-  max-width: 35%;
-}
+    /*--------------------CONOCIMIENTOS-------------------*/
+    .principal .container .conocimientos{
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      margin: 0;
+      padding: 0;
+    }
+    .conocimientos div{
+      margin: 0;
+      padding: 0;
+    }
+    .conocimientos img{
+      width: 100%;
+      max-width: 50%;
+    }
+    .conocimientos div:nth-of-type(4) img{
+      width: 100%;
+      max-width: 35%;
+    }
 
-/*------------------CERTIFICACIONES--------------------*/
-.diplomas{
- display: grid;
- grid-template: repeat(5, 1fr) / repeat(2, 1fr);
- grid-template-areas: "n1 n2"
- "n3 n4"
- "n5 n6"
- "n7 n8"
- "n9 n9";
- grid-gap: 5px;
- overflow: hidden;
- padding: 3px 3px;
-}
+    /*------------------CERTIFICACIONES--------------------*/
+    .diplomas{
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(2, 1fr);
+    grid-template-areas: "n1 n2"
+    "n3 n4"
+    "n5 n6"
+    "n7 n8"
+    "n9 n10"
+    "n11 n12"
+    "n13 n14"
+    "n15 n15";
+    grid-gap: 5px;
+    overflow: hidden;
+    padding: 3px 3px;
+    }
 
-/*-------------------EXPERIENCIA----------------------*/
-.experiencia .container{
-  display: block;
-  width: 100%;
-}
-.experiencia .container .grid-exp-container{
-  display: block;
-}
-.job:nth-of-type(1){
-  margin-bottom: 25px;
-}
-.job:nth-of-type(2){
-  margin-bottom: 25px;
-}
-.job:nth-of-type(3){
-  margin-bottom: 25px;
-}
+    /*-------------------EXPERIENCIA----------------------*/
+    .experiencia .container{
+      display: block;
+      width: 100%;
+    }
+    .experiencia .container .grid-exp-container{
+      display: block;
+    }
+    .job:nth-of-type(1){
+      margin-bottom: 25px;
+    }
+    .job:nth-of-type(2){
+      margin-bottom: 25px;
+    }
+    .job:nth-of-type(3){
+      margin-bottom: 25px;
+    }
 
-/*----------------FORMACION----------------*/
-.formacion .estudios{
-  display: block;
-}
-.formacion .estudios .udec{
-  padding: 25px;
-}
-.estudios img{
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 320px){
- .hero{
-  padding: 0 20px;
-  margin-top: 15px;
-}
-.hero h1{
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 5px;
-}
-.hero img{
-  margin-bottom: 15px;
-}
+    /*----------------FORMACION----------------*/
+    .formacion .estudios{
+      display: block;
+    }
+    .formacion .estudios .udec{
+      padding: 25px;
+    }
+    .estudios img{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 320px){
+    .hero{
+      padding: 0 20px;
+      margin-top: 15px;
+    }
+    .hero h1{
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 5px;
+    }
+    .hero img{
+      margin-bottom: 15px;
+    }
 
-.grid-carreras img{
-  width: 100%;
-}
+    .grid-carreras img{
+      width: 100%;
+    }
 
-.logros .diplomas{
-  display: block;
-}
-.diplomas .diploma{
-  margin-bottom: 5px;
-}
+    .logros .diplomas{
+      display: block;
+    }
+    .diplomas .diploma{
+      margin-bottom: 5px;
+    }
 
-.container .icons{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 0;
-}
-.icons a{
-  margin: 0 5px;
-}
+    .container .icons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .icons a{
+      margin: 0 5px;
+    }
 
-.icons i{
-  display: block;
-  width: 100%;
-  font-size: 30px;
-
-}
+    .icons i{
+      display: block;
+      width: 100%;
+      font-size: 30px;
+    } 
+  }
+}  
